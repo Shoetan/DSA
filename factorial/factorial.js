@@ -23,10 +23,15 @@
 */
 
 function factorial (n){
-    let factorial = 0
+    let factorial = 1
 
-    for (let i = 1; i <= n; i++) {
-        factorial = factorial * i
+    for (let i = 2; i <= n; i++) {
+        factorial = factorial * i 
     }
     console.log(factorial)
 }
+
+factorial(5)
+
+factorial (6)
+
