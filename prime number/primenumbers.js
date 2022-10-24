@@ -22,31 +22,22 @@ function checkPrime (n)
 
 {
 
-    
-let isPrime = true
-
-    if (n == 1)
+    if (n < 2) 
     {
-        console.log("1 is not a prime number")
+        return false
     }
 
-    else if ( n>1 ) {
-        for (let index = 2; index < n; index++) {
-            if (n%index == 0) {
-                isPrime = false
-                break
-            }
-            
+    for(let I = 2; I < n; I++)
+    {
+        if (n % I == 0)
+        {
+            return false
         }
-
-        if (isPrime) {
-            console.log(`${n} Number is a prime number`)
-        }
-        else  {
-            console.log(`${n} Number is not a prime number`)
+        return true
     }
-
-}
 }
 
-checkPrime(6)
+console.log(checkPrime(6))
+console.log(checkPrime(7))
+
+//Big O of the function is  O(n). As the number of n increases the time it takes increases also
